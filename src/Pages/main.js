@@ -15,9 +15,6 @@ export default function Main() {
 
   function generatePassword() {
     let passsword = ''
-    if (lenghtEl) {
-      let lenght = lenghtEl.value
-    }
     let lenght = lenghtEl.value
     let chars = ''
 
@@ -51,19 +48,19 @@ export default function Main() {
           <input type="number" id="lenght" min="5" max="50" value="16" />
         </label>
         <label>
-          <span>Include Lowercase Letters</span>
+          <span>Include Lowercase Letters: </span>
           <input type="checkbox" id="lowercase" checked />
         </label>
         <label>
-          <span>Include Upperercase Letters</span>
+          <span>Include Upperercase Letters: </span>
           <input type="checkbox" id="uppercase" checked />
         </label>
         <label>
-          <span>Include Numbers</span>
+          <span>Include Numbers: </span>
           <input type="checkbox" id="numbers" checked />
         </label>
         <label>
-          <span>Include Symbols</span>
+          <span>Include Symbols: </span>
           <input type="checkbox" id="symbols" checked />
         </label>
 
