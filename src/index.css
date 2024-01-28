@@ -2,9 +2,21 @@
   margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
-  /* font-family: 'muli'   sans-serif; */
+  font-family: 'Muli', sans-serif;
 }
 
 body {
+  height: 100vh;
+  width: 100%;
   background-color: #2f1e87;
+  position: absolute;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  cursor: pointer;
 }
