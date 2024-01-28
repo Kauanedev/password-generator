@@ -1,31 +1,27 @@
 import './style.css';
 
 export default function Main() {
-  const passwordEl = document.querySelector('#password')
-  const lenghtEl = document.querySelector('#lenght')
-  const uppercaseEl = document.querySelector('#uppercase')
-  const lowercaseEl = document.querySelector('#lowercase')
-  const numbersEl = document.querySelector('#numbers')
-  const symbolsEl = document.querySelector('#symbols')
 
-  const uppercaseChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-  const lowercaseChars = 'abcdefghijklmnopqrstuvwxyz'
-  const numberChars = '0123456789'
-  const symbolChars = '!@#$%^&*()_+-=[]{}|;:,.<>/?'
 
   function generatePassword() {
+    const passwordEl = document.querySelector('#password')
+    const lenghtEl = document.querySelector('#lenght')
+    const uppercaseEl = document.querySelector('#uppercase')
+    const lowercaseEl = document.querySelector('#lowercase')
+    const numbersEl = document.querySelector('#numbers')
+    const symbolsEl = document.querySelector('#symbols')
+
+    const uppercaseChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    const lowercaseChars = 'abcdefghijklmnopqrstuvwxyz'
+    const numberChars = '0123456789'
+    const symbolChars = '!@#$%^&*()_+-=[]{}|;:,.<>/?'
+
     let passsword = ''
     let lenght = lenghtEl.value
-    if (lenght) {
-      lenght = lenghtEl.value
-    }
-    else {
-      lenght = 16
-    }
     let chars = ''
 
-    chars += uppercaseEl.checked ? uppercaseChars : ''
     chars += lowercaseEl.checked ? lowercaseChars : ''
+    chars += uppercaseEl.checked ? uppercaseChars : ''
     chars += numbersEl.checked ? numberChars : ''
     chars += symbolsEl.checked ? symbolChars : ''
 
