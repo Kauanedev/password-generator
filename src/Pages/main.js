@@ -46,7 +46,15 @@ export default function Main() {
 
         <label className="password-wrap">
           <input type="text" id="password" readOnly placeholder="Generate a password" />
-          <button class="material-icons" id="copy">content_copy</button>
+          <button
+            className="material-icons"
+            id="copy"
+            onClick={() => {
+              const password = document.querySelector("#password");
+              password.select();
+              document.execCommand("copy");
+            }}
+          >content_copy</button>
         </label>
 
         <label>
