@@ -16,6 +16,12 @@ export default function Main() {
   function generatePassword() {
     let passsword = ''
     let lenght = lenghtEl.value
+    if (lenght) {
+      lenght = lenghtEl.value
+    }
+    else {
+      lenght = 16
+    }
     let chars = ''
 
     chars += uppercaseEl.checked ? uppercaseChars : ''
@@ -39,29 +45,29 @@ export default function Main() {
         <h2>Password Generator</h2>
 
         <label className="password-wrap">
-          <input type="text" id="password" readonly placeholder="Generate a password" />
+          <input type="text" id="password" readOnly placeholder="Generate a password" />
           <button class="material-icons" id="copy">content_copy</button>
         </label>
 
         <label>
           <span>Password Lenght: </span>
-          <input type="number" id="lenght" min="5" max="50" value="16" />
+          <input type="number" id="lenght" min="5" max="50" defaultValue="16" />
         </label>
         <label>
           <span>Include Lowercase Letters: </span>
-          <input type="checkbox" id="lowercase" checked />
+          <input type="checkbox" id="lowercase" defaultChecked />
         </label>
         <label>
           <span>Include Upperercase Letters: </span>
-          <input type="checkbox" id="uppercase" checked />
+          <input type="checkbox" id="uppercase" defaultChecked />
         </label>
         <label>
           <span>Include Numbers: </span>
-          <input type="checkbox" id="numbers" checked />
+          <input type="checkbox" id="numbers" defaultChecked />
         </label>
         <label>
           <span>Include Symbols: </span>
-          <input type="checkbox" id="symbols" checked />
+          <input type="checkbox" id="symbols" defaultChecked />
         </label>
 
         <button
@@ -72,7 +78,6 @@ export default function Main() {
 
 
       </div>
-
 
 
     </div>
