@@ -41,7 +41,7 @@ export default function Main() {
         <h2>Password Generator</h2>
 
         <label className="password-wrap">
-          <input type="text" id="password" readOnly placeholder="Generate a password" />
+          <input type="text" id="password" placeholder="Generate a password" />
           <button
             className="material-icons"
             id="copy"
